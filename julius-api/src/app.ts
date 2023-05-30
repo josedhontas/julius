@@ -5,7 +5,7 @@ import * as logger from 'morgan';
 
 import { conectarServidorNoBD } from './config/db';
 import { routerUsuario } from './routes/Usuario';
-
+import { routerLancamento } from './routes/lancamento';
 //cria aplicacao
 export const app = express();
 
@@ -18,4 +18,4 @@ app.use(logger('dev'));
 conectarServidorNoBD();
 
 app.use('/usuario', routerUsuario);
-app.use('/', (req, res) => res.send('API do app Julius'))
+app.use('/lancamento', routerLancamento);

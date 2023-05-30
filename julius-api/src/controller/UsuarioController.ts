@@ -9,6 +9,12 @@ export class UsuarioController{
 
     async recuperarTodos(){
         const usuarios = await getManager().find(Usuario);
-        
+        return usuarios;
+    }
+
+    async recuperarPorId(id: number){
+        const usuario = await getManager().findOne(Usuario, id);
+        return usuario;
+
     }
 }
