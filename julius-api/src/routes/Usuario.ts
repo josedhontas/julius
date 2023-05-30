@@ -15,6 +15,12 @@ routerUsuario.post('/', async (req, res) => {
 
 routerUsuario.get('/',async (req,res) => {
     const usuario = await usuarioCtrl.recuperarTodos();
-    res.json(usuario);
+    res.json(usuario); 
+})
+
+routerUsuario.get('/lancamentos/:idUsuario',async (req, res) => {
+    const idUsuario = parseInt(req.params.idUsuario);
+    const lancamentos = await usuarioCtrl.recuperarLancamentoDoUsuario(idUsuario);
+    res.json(lancamentos);
     
 })
