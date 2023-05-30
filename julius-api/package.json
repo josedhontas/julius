@@ -16,10 +16,11 @@
       "nodemon": "^2.0.22",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.13",
-      "typeorm": "0.3.16"
+      "typeorm": "0.2.25"
    },
    "scripts": {
-      "start": "ts-node src/index.ts",
+      "dev": "nodemon --exec ts-node src/server.ts",
+      "start": "ts-node src/server.ts",
       "typeorm": "typeorm-ts-node-commonjs"
    }
 }
