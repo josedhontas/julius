@@ -16,6 +16,6 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 
 conectarServidorNoBD();
-
+app.use('/', (req, res) => res.send('API do app Julius'));
 app.use('/usuario', routerUsuario);
 app.use('/lancamento', routerLancamento);
